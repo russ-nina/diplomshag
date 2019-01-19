@@ -1,0 +1,94 @@
+/*Header*/
+/*-----------------------------------------------------------------------------*/
+header{
+    width: 100%;
+    background-image:  radial-gradient(rgba(119, 117, 112, .8), rgba(74, 72, 67, .8)),url("../../assets/img/gorod.jpg");
+    /*background-position: center center;*/
+    background-size: cover;
+    padding: 25px 25px 5px 25px;
+    min-height: 350px;
+    transition-duration: 1s;
+}
+header:hover{
+    background-image: radial-gradient(rgba(119, 117, 112, .5), rgba(74, 72, 67, .8)),url("../../assets/img/gorod.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+.local_date{
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.local_date a{
+    font-size: 18px;
+    font-family: Lato Light, sans-serif;
+    color: #f1f1f1;
+}
+.local_date:hover a{
+    color: #ff6f61;
+}
+.head{
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.site_name{
+    font-family: Raleway, sans-serif;
+    font-size: 110px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    transition-duration: 1s;
+}
+.site_name:hover{
+    color: #ff6f61;
+}
+.navigation{
+    display: flex;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    align-items: center;
+    padding: 20px 0 15px 0;
+}
+.navigation li{
+    margin-right: 15px;
+}
+.navigation li a{
+    transition-duration: .3s;
+}
+.navigation li:hover a{
+    color: #ff6f61;
+    text-decoration: underline;
+}
+.navigation li a{
+    color: white;
+    font-family: Lato Regular, sans-serif;
+    font-size: 24px;
+}
+/*-----------------------------------------------------------------------------*/
+/*End Header*/
+
+
+/*General rules*/
+/*-----------------------------------------------------------------------------*/
+a{
+    text-decoration: none;
+}
+.coral{
+    color: #ff6f61;
+}
+.active{
+    background-color: #ff6f61;
+}
+.nav_active{
+    text-decoration: underline;
+}
+/*-----------------------------------------------------------------------------*/
+/*End General rules*/

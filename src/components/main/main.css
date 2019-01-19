@@ -1,0 +1,221 @@
+/*Middle*/
+/*-----------------------------------------------------------------------------*/
+.middle {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+/*Container main*/
+/*--------------------------------------------*/
+.container{
+    grid-column: 1/10;
+    min-height: 900px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+/*--------------------------------------------*/
+/*End Container main*/
+
+/*Right_sidebar*/
+/*--------------------------------------------*/
+.right_sidebar{
+    grid-column: 10/13;
+    min-height: 900px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/*Search*/
+/*-----------------------*/
+.search{
+    margin-top: 25px;
+}
+.search p{
+    font-family: Lato Regular, sans-serif;
+    font-size: 18px;
+    color: #4a4843;
+}
+.search input{
+    height: 35px;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #4a4843;
+    padding: 5px;
+    outline:none;
+}
+/*-----------------------*/
+/*End Search*/
+
+/*Filter Article*/
+/*-----------------------*/
+.filter_headline{
+    width: 100%;
+    display: flex;
+    margin-top: 25px;
+}
+.recent, .popular, .archived{
+    background-color: #4a4843;
+    box-shadow: 0 0 5px rgba(74, 72, 67, .3);
+    padding: 10px;
+    border: 1px solid #f1f1f1;
+    width: calc(100% / 3);
+    cursor: pointer;
+    transition-duration: .3s;
+}
+.archived:hover{
+    background-color: #ff6f61;
+}
+.popular:hover{
+    background-color: #ff6f61;
+}
+.recent:hover{
+    background-color: #ff6f61;
+}
+.recent, .popular, .archived p{
+    color: #f1f1f1;
+    font-size: 18px;
+    font-family: Lato Regular, sans-serif;
+}
+.filter_article{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 15px;
+    cursor: pointer;
+}
+.filter_article:hover{
+    background-color: #f1f1f1;
+    box-shadow: 0 0 5px rgba(74, 72, 67, .2);
+}
+.filter_article_image{
+    grid-column: 1;
+    grid-row: 1/3;
+    overflow: hidden;
+}
+.filter_article_image img{
+    width: 100%;
+}
+.filter_article_headline{
+    grid-column: 2/4;
+    grid-row: 1;
+    margin-left: 10px;
+}
+.filter_article_headline h5 a{
+    font-size: 16px;
+    font-family: Lato Regular, sans-serif;
+    color: #4a4843;
+}
+.filter_article_headline:hover{
+    text-decoration: underline;
+}
+.filter_article_comment{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-left: 10px;
+}
+.filter_article_comment p{
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #4a4843;
+    box-shadow: 0 0 5px rgba(74, 72, 67, .3);
+    color: white;
+    font-size: 12px;
+    font-family: Lato Light, sans-serif;
+}
+/*-----------------------*/
+/*End Filter Article*/
+
+/*Comments_block*/
+/*-----------------------*/
+.comments_block{
+    margin-top: 25px;
+}
+.comments_category{
+    display: flex;
+}
+.recent_comments{
+    background-color: #4a4843;
+    box-shadow: 0 0 5px rgba(74, 72, 67, .3);
+    padding: 10px;
+    border: 1px solid #f1f1f1;
+    width: 100%;
+    transition-duration: .3s;
+}
+.recent_comments p{
+    color: #f1f1f1;
+    font-size: 18px;
+    font-family: Lato Regular, sans-serif;
+}
+.recent_comments:hover{
+    background-color: #ff6f61;
+}
+.comment{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    margin-top: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.comment:hover{
+    background-color: #f1f1f1;
+    box-shadow: 0 0 5px rgba(74, 72, 67, .2);
+}
+.user_avatar{
+    grid-column: 1;
+    grid-row: 1/7;
+    overflow: hidden;
+}
+.user_avatar img{
+    width: 100%;
+}
+.user_name{
+    grid-column: 2/4;
+    grid-row: 1/2;
+    margin-left: 10px;
+}
+.user_name h5{
+    font-size: 16px;
+    font-family: Lato Regular, sans-serif;
+    color: #4a4843;
+}
+.user_comment{
+    grid-column: 2/4;
+    grid-row: 2/7;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.user_comment p{
+    font-size: 14px;
+    font-family: Lato Light, sans-serif;
+    color: #4a4843;
+}
+/*-----------------------*/
+/*End Comments_block*/
+/*--------------------------------------------*/
+/*End Right_sidebar*/
+/*-----------------------------------------------------------------------------*/
+/*End Middle*/
+
+
+/*General rules*/
+/*-----------------------------------------------------------------------------*/
+a{
+    text-decoration: none;
+}
+.coral{
+    color: #ff6f61;
+}
+.active{
+    background-color: #ff6f61;
+}
+.nav_active{
+    text-decoration: underline;
+}
+/*-----------------------------------------------------------------------------*/
+/*End General rules*/

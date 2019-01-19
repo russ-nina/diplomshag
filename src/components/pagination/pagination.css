@@ -1,0 +1,36 @@
+.pagination{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+.page{
+    background-color: #4a4843;
+    margin-right: 3px;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+.page a{
+    color: #f1f1f1;
+}
+.page:hover{
+    background-color: #ff6f61;
+    box-shadow: 0 0 5px rgba(74, 72, 67, .3);
+}
+
+/*General rules*/
+/*-----------------------------------------------------------------------------*/
+a{
+    text-decoration: none;
+}
+.coral{
+    color: #ff6f61;
+}
+.active{
+    background-color: #ff6f61;
+}
+.nav_active{
+    text-decoration: underline;
+}
+/*-----------------------------------------------------------------------------*/
+/*End General rules*/

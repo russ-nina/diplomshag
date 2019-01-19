@@ -1,0 +1,103 @@
+/*Footer*/
+/*-----------------------------------------------------------------------------*/
+.footer{
+    width: 100%;
+    background-color: #4a4843;
+    min-height: 150px;
+    display: flex;
+}
+.footer_cover{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+/*Footer left side*/
+/*--------------------------------------------*/
+.footer_left_side{
+    width: 75%;
+}
+.main_info{
+    display: flex;
+    align-items: center;
+    padding: 25px 0 25px 0;
+}
+.our_history, .our_team, .how_we_do_it, .contacts{
+    margin-right: 25px;
+}
+.our_history p, .our_team p, .how_we_do_it p, .contacts p{
+    color: #f1f1f1;
+    font-family: Lato Regular, sans-serif;
+    font-size: 24px;
+    text-transform: capitalize;
+    transition-duration: .3s;
+}
+.our_history:hover p{
+    color: #ff6f61;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.our_team:hover p{
+    color: #ff6f61;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.how_we_do_it:hover p{
+    color: #ff6f61;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.contacts:hover p{
+    color: #ff6f61;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.copyright p{
+    font-family: Lato Light, sans-serif;
+    font-size: 12px;
+    padding-top: 25px;
+}
+/*--------------------------------------------*/
+/*End Footer left side*/
+
+/*Footer right side*/
+/*--------------------------------------------*/
+.footer_right_side{
+    width: 25%;
+}
+.we_are_in_social_networks{
+    padding: 25px 0 25px 0;
+}
+.we_are_in_social_networks p{
+    color: #f1f1f1;
+    font-family: Lato Regular, sans-serif;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.social_networks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+/*--------------------------------------------*/
+/*End Footer right side*/
+/*-----------------------------------------------------------------------------*/
+/*End Footer*/
+
+/*General rules*/
+/*-----------------------------------------------------------------------------*/
+a{
+    text-decoration: none;
+}
+.coral{
+    color: #ff6f61;
+}
+.active{
+    background-color: #ff6f61;
+}
+.nav_active{
+    text-decoration: underline;
+}
+/*-----------------------------------------------------------------------------*/
+/*End General rules*/

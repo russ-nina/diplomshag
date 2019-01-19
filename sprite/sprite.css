@@ -1,0 +1,772 @@
+
+
+ /*///////////////////////////////*/
+ /* Sprit Icons //////////////////*/
+/*///////////////////////////////*/
+
+
+.icon {
+  display: inline-block;
+}
+
+.icon-lock {
+    background: url('../src/assets/img/sprit.png') no-repeat -20px -18px;
+    width: 60px;
+    height: 64px;
+}
+
+.icon-robot {
+    background: url('../src/assets/img/sprit.png') no-repeat -120px -15px;
+    width: 70px;
+    height: 71px;
+}
+
+.icon-diamond {
+    background: url('../src/assets/img/sprit.png') no-repeat -214px -17px;
+    width: 72px;
+    height: 66px;
+}
+
+.icon-paint-brush {
+    background: url('../src/assets/img/sprit.png') no-repeat -214px -17px;
+    width: 72px;
+    height: 66px;
+}
+
+.icon-imac {
+    background: url('../src/assets/img/sprit.png') no-repeat -415px -17px;
+    width: 70px;
+    height: 66px;
+}
+
+.icon-gift {
+    background: url('../src/assets/img/sprit.png') no-repeat -516px -17px;
+    width: 68px;
+    height: 66px;
+}
+
+.icon-thunder-bolt {
+    background: url('../src/assets/img/sprit.png') no-repeat -624px -16px;
+    width: 53px;
+    height: 69px;
+}
+
+.icon-medal {
+    background: url('../src/assets/img/sprit.png') no-repeat -722px -14px;
+    width: 58px;
+    height: 72px;
+}
+
+.icon-coffee {
+    background: url('../src/assets/img/sprit.png') no-repeat -23px -117px;
+    width: 54px;
+    height: 67px;
+}
+
+.icon-rocket {
+    background: url('../src/assets/img/sprit.png') no-repeat -122px -117px;
+    width: 66px;
+    height: 66px;
+}
+
+.icon-microphone {
+    background: url('../src/assets/img/sprit.png') no-repeat -222px -114px;
+    width: 56px;
+    height: 72px;
+}
+
+.icon-floppy {
+    background: url('../src/assets/img/sprit.png') no-repeat -317px -117px;
+    width: 66px;
+    height: 66px;
+}
+
+.icon-suitcase {
+    background: url('../src/assets/img/sprit.png') no-repeat -415px -116px;
+    width: 70px;
+    height: 68px;
+}
+
+.icon-stats {
+    background: url('../src/assets/img/sprit.png') no-repeat -513px -118px;
+    width: 74px;
+    height: 65px;
+}
+
+.icon-calendar {
+    background: url('../src/assets/img/sprit.png') no-repeat -614px -116px;
+    width: 72px;
+    height: 68px;
+}
+
+.icon-user {
+    background: url('../src/assets/img/sprit.png') no-repeat -717px -119px;
+    width: 66px;
+    height: 63px;
+}
+
+.icon-ufo {
+    background: url('../src/assets/img/sprit.png') no-repeat -20px -218px;
+    width: 60px;
+    height: 64px;
+}
+
+.icon-film {
+    background: url('../src/assets/img/sprit.png') no-repeat -120px -216px;
+    width: 70px;
+    height: 68px;
+}
+
+.icon-home {
+    background: url('../src/assets/img/sprit.png') no-repeat -215px -213px;
+    width: 70px;
+    height: 74px;
+}
+
+.icon-chat {
+    background: url('../src/assets/img/sprit.png') no-repeat -314px -213px;
+    width: 72px;
+    height: 72px;
+}
+
+.icon-paper-plane {
+    background: url('../src/assets/img/sprit.png') no-repeat -410px -217px;
+    width: 80px;
+    height: 66px;
+}
+
+.icon-clock {
+    background: url('../src/assets/img/sprit.png') no-repeat -513px -213px;
+    width: 74px;
+    height: 74px;
+}
+
+.icon-mobile {
+    background: url('../src/assets/img/sprit.png') no-repeat -627px -212px;
+    width: 46px;
+    height: 76px;
+}
+
+.icon-pencil {
+    background: url('../src/assets/img/sprit.png') no-repeat -715px -214px;
+    width: 71px;
+    height: 71px;
+}
+
+.icon-skul {
+    background: url('../src/assets/img/sprit.png') no-repeat -18px -315px;
+    width: 64px;
+    height: 70px;
+}
+
+.icon-thumbs-down {
+    background: url('../src/assets/img/sprit.png') no-repeat -114px -322px;
+    width: 72px;
+    height: 57px;
+}
+
+.icon-heart {
+    background: url('../src/assets/img/sprit.png') no-repeat -214px -318px;
+    width: 72px;
+    height: 64px;
+}
+
+.icon-slider {
+    background: url('../src/assets/img/sprit.png') no-repeat -310px -331px;
+    width: 80px;
+    height: 38px;
+}
+
+.icon-folder {
+    background: url('../src/assets/img/sprit.png') no-repeat -415px -317px;
+    width: 70px;
+    height: 66px;
+}
+
+.icon-search {
+    background: url('../src/assets/img/sprit.png') no-repeat -514px -314px;
+    width: 73px;
+    height: 73px;
+}
+
+.icon-mail {
+    background: url('../src/assets/img/sprit.png') no-repeat -612px -314px;
+    width: 76px;
+    height: 71px;
+}
+
+.icon-flag {
+    background: url('../src/assets/img/sprit.png') no-repeat -725px -313px;
+    width: 51px;
+    height: 74px;
+}
+
+.icon-crown {
+    background: url('../src/assets/img/sprit.png') no-repeat -13px -418px;
+    width: 74px;
+    height: 64px;
+}
+
+.icon-mac-os {
+    background: url('../src/assets/img/sprit.png') no-repeat -119px -414px;
+    width: 72px;
+    height: 72px;
+}
+
+.icon-picture {
+    background: url('../src/assets/img/sprit.png') no-repeat -212px -412px;
+    width: 76px;
+    height: 76px;
+}
+
+.icon-camera {
+    background: url('../src/assets/img/sprit.png') no-repeat -314px -421px;
+    width: 72px;
+    height: 59px;
+}
+
+.icon-pin {
+    background: url('../src/assets/img/sprit.png') no-repeat -421px -415px;
+    width: 58px;
+    height: 70px;
+}
+
+.icon-strom {
+    background: url('../src/assets/img/sprit.png') no-repeat -513px -415px;
+    width: 74px;
+    height: 71px;
+}
+
+.icon-papers {
+    background: url('../src/assets/img/sprit.png') no-repeat -623px -416px;
+    width: 55px;
+    height: 69px;
+}
+
+.icon-dribbble-2 {
+    background: url('../src/assets/img/sprit.png') no-repeat -715px -415px;
+    width: 70px;
+    height: 70px;
+}
+
+.icon-trash {
+    background: url('../src/assets/img/sprit.png') no-repeat -15px -516px;
+    width: 70px;
+    height: 68px;
+}
+
+.icon-settings {
+    background: url('../src/assets/img/sprit.png') no-repeat -121px -516px;
+    width: 68px;
+    height: 68px;
+}
+
+.icon-thumbs-up {
+    background: url('../src/assets/img/sprit.png') no-repeat -214px -521px;
+    width: 72px;
+    height: 57px;
+}
+
+.icon-label {
+    background: url('../src/assets/img/sprit.png') no-repeat -315px -513px;
+    width: 71px;
+    height: 73px;
+}
+
+.icon-mega-phone {
+    background: url('../src/assets/img/sprit.png') no-repeat -413px -515px;
+    width: 75px;
+    height: 71px;
+}
+
+.icon-music {
+    background: url('../src/assets/img/sprit.png') no-repeat -521px -514px;
+    width: 58px;
+    height: 72px;
+}
+
+.icon-support {
+    background: url('../src/assets/img/sprit.png') no-repeat -613px -513px;
+    width: 74px;
+    height: 74px;
+}
+
+.icon-compass {
+    background: url('../src/assets/img/sprit.png') no-repeat -718px -518px;
+    width: 64px;
+    height: 64px;
+}
+
+.icon-bulb {
+    background: url('../src/assets/img/sprit.png') no-repeat -28px -619px;
+    width: 44px;
+    height: 49px;
+}
+
+.icon-play {
+    background: url('../src/assets/img/sprit.png') no-repeat -124px -619px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-calc {
+    background: url('../src/assets/img/sprit.png') no-repeat -226px -618px;
+    width: 48px;
+    height: 64px;
+}
+
+.icon-clown {
+    background: url('../src/assets/img/sprit.png') no-repeat -313px -621px;
+    width: 74px;
+    height: 58px;
+}
+
+.icon-shopping {
+    background: url('../src/assets/img/sprit.png') no-repeat -420px -621px;
+    width: 60px;
+    height: 58px;
+}
+
+.icon-joystick {
+    background: url('../src/assets/img/sprit.png') no-repeat -515px -620px;
+    width: 70px;
+    height: 60px;
+}
+
+.icon-cup {
+    background: url('../src/assets/img/sprit.png') no-repeat -618px -618px;
+    width: 65px;
+    height: 65px;
+}
+
+.icon-settings-2 {
+    background: url('../src/assets/img/sprit.png') no-repeat -719px -620px;
+    width: 62px;
+    height: 60px;
+}
+
+.icon-speaker {
+    background: url('../src/assets/img/sprit.png') no-repeat -21px -718px;
+    width: 58px;
+    height: 64px;
+}
+
+.icon-cube {
+    background: url('../src/assets/img/sprit.png') no-repeat -125px -717px;
+    width: 60px;
+    height: 66px;
+}
+
+.icon-car {
+    background: url('../src/assets/img/sprit.png') no-repeat -216px -724px;
+    width: 68px;
+    height: 52px;
+}
+
+.icon-coin {
+    background: url('../src/assets/img/sprit.png') no-repeat -318px -718px;
+    width: 64px;
+    height: 64px;
+}
+
+.icon-wallet {
+    background: url('../src/assets/img/sprit.png') no-repeat -418px -722px;
+    width: 64px;
+    height: 56px;
+}
+
+.icon-firework {
+    background: url('../src/assets/img/sprit.png') no-repeat -520px -719px;
+    width: 60px;
+    height: 60px;
+}
+
+.icon-microwave {
+    background: url('../src/assets/img/sprit.png') no-repeat -618px -725px;
+    width: 64px;
+    height: 50px;
+}
+
+.icon-alarm {
+    background: url('../src/assets/img/sprit.png') no-repeat -723px -716px;
+    width: 54px;
+    height: 67px;
+}
+
+.icon-paint-roller {
+    background: url('../src/assets/img/sprit.png') no-repeat -17px -817px;
+    width: 66px;
+    height: 66px;
+}
+
+.icon-button {
+    background: url('../src/assets/img/sprit.png') no-repeat -122px -817px;
+    width: 66px;
+    height: 66px;
+}
+
+.icon-bow {
+    background: url('../src/assets/img/sprit.png') no-repeat -219px -819px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-game-boy {
+    background: url('../src/assets/img/sprit.png') no-repeat -326px -818px;
+    width: 48px;
+    height: 64px;
+}
+
+.icon-fire {
+    background: url('../src/assets/img/sprit.png') no-repeat -422px -815px;
+    width: 56px;
+    height: 70px;
+}
+
+.icon-vinyl {
+    background: url('../src/assets/img/sprit.png') no-repeat -517px -817px;
+    width: 66px;
+    height: 66px;
+}
+
+.icon-mouse {
+    background: url('../src/assets/img/sprit.png') no-repeat -618px -817px;
+    width: 65px;
+    height: 66px;
+}
+
+.icon-milk-shake {
+    background: url('../src/assets/img/sprit.png') no-repeat -729px -814px;
+    width: 42px;
+    height: 70px;
+}
+
+.icon-book {
+    background: url('../src/assets/img/sprit.png') no-repeat -22px -918px;
+    width: 56px;
+    height: 64px;
+}
+
+.icon-joy-stick {
+    background: url('../src/assets/img/sprit.png') no-repeat -125px -919px;
+    width: 60px;
+    height: 63px;
+}
+
+.icon-map {
+    background: url('../src/assets/img/sprit.png') no-repeat -220px -918px;
+    width: 60px;
+    height: 64px;
+}
+
+.icon-water-melon {
+    background: url('../src/assets/img/sprit.png') no-repeat -310px -930px;
+    width: 80px;
+    height: 40px;
+}
+
+.icon-lab {
+    background: url('../src/assets/img/sprit.png') no-repeat -420px -917px;
+    width: 60px;
+    height: 66px;
+}
+
+.icon-shield {
+    background: url('../src/assets/img/sprit.png') no-repeat -522px -917px;
+    width: 56px;
+    height: 66px;
+}
+
+.icon-pie-chart {
+    background: url('../src/assets/img/sprit.png') no-repeat -617px -917px;
+    width: 66px;
+    height: 66px;
+}
+
+.icon-flower-pot {
+    background: url('../src/assets/img/sprit.png') no-repeat -724px -919px;
+    width: 52px;
+    height: 62px;
+}
+
+.icon-magnet {
+    background: url('../src/assets/img/sprit.png') no-repeat -20px -1020px;
+    width: 60px;
+    height: 60px;
+}
+
+.icon-burger {
+    background: url('../src/assets/img/sprit.png') no-repeat -124px -1025px;
+    width: 62px;
+    height: 51px;
+}
+
+.icon-lighthouse {
+    background: url('../src/assets/img/sprit.png') no-repeat -220px -1017px;
+    width: 60px;
+    height: 66px;
+}
+
+.icon-ring {
+    background: url('../src/assets/img/sprit.png') no-repeat -322px -1015px;
+    width: 56px;
+    height: 70px;
+}
+
+.icon-toilet-paper {
+    background: url('../src/assets/img/sprit.png') no-repeat -419px -1021px;
+    width: 62px;
+    height: 58px;
+}
+
+.icon-couch {
+    background: url('../src/assets/img/sprit.png') no-repeat -513px -1023px;
+    width: 74px;
+    height: 55px;
+}
+
+.icon-scissors {
+    background: url('../src/assets/img/sprit.png') no-repeat -620px -1018px;
+    width: 60px;
+    height: 64px;
+}
+
+.icon-right {
+    background: url('../src/assets/img/sprit.png') no-repeat -736px -1030px;
+    width: 29px;
+    height: 41px;
+}
+
+.icon-cake {
+    background: url('../src/assets/img/sprit.png') no-repeat -17px -1118px;
+    width: 66px;
+    height: 65px;
+}
+
+.icon-repair {
+    background: url('../src/assets/img/sprit.png') no-repeat -125px -1120px;
+    width: 60px;
+    height: 60px;
+}
+
+.icon-globe {
+    background: url('../src/assets/img/sprit.png') no-repeat -227px -1122px;
+    width: 54px;
+    height: 64px;
+}
+
+.icon-mush {
+    background: url('../src/assets/img/sprit.png') no-repeat -310px -1126px;
+    width: 80px;
+    height: 33px;
+}
+
+.icon-bell {
+    background: url('../src/assets/img/sprit.png') no-repeat -420px -1120px;
+    width: 60px;
+    height: 61px;
+}
+
+.icon-thermometre {
+    background: url('../src/assets/img/sprit.png') no-repeat -536px -1117px;
+    width: 28px;
+    height: 66px;
+}
+
+.icon-eye {
+    background: url('../src/assets/img/sprit.png') no-repeat -612px -1125px;
+    width: 76px;
+    height: 50px;
+}
+
+.icon-left {
+    background: url('../src/assets/img/sprit.png') no-repeat -736px -1130px;
+    width: 29px;
+    height: 41px;
+}
+
+.icon-rss {
+    background: url('../src/assets/img/sprit.png') no-repeat -19px -1219px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-facebook {
+    background: url('../src/assets/img/sprit.png') no-repeat -119px -1219px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-twitter {
+    background: url('../src/assets/img/sprit.png') no-repeat -219px -1219px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-flickr {
+    background: url('../src/assets/img/sprit.png') no-repeat -319px -1219px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-ember {
+    background: url('../src/assets/img/sprit.png') no-repeat -419px -1219px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-google {
+    background: url('../src/assets/img/sprit.png') no-repeat -519px -1219px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-vimeo {
+    background: url('../src/assets/img/sprit.png') no-repeat -619px -1219px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-dribbble {
+    background: url('../src/assets/img/sprit.png') no-repeat -719px -1219px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-share-this {
+    background: url('../src/assets/img/sprit.png') no-repeat -19px -1319px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-skype {
+    background: url('../src/assets/img/sprit.png') no-repeat -119px -1319px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-youtube {
+    background: url('../src/assets/img/sprit.png') no-repeat -219px -1319px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-github {
+    background: url('../src/assets/img/sprit.png') no-repeat -319px -1319px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-yahoo {
+    background: url('../src/assets/img/sprit.png') no-repeat -419px -1319px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-aim {
+    background: url('../src/assets/img/sprit.png') no-repeat -519px -1319px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-linkedin {
+    background: url('../src/assets/img/sprit.png') no-repeat -619px -1319px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-evernote {
+    background: url('../src/assets/img/sprit.png') no-repeat -719px -1319px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-behance {
+    background: url('../src/assets/img/sprit.png') no-repeat -19px -1419px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-blogger {
+    background: url('../src/assets/img/sprit.png') no-repeat -119px -1419px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-paypal {
+    background: url('../src/assets/img/sprit.png') no-repeat -219px -1419px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-quora {
+    background: url('../src/assets/img/sprit.png') no-repeat -319px -1419px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-forrst {
+    background: url('../src/assets/img/sprit.png') no-repeat -419px -1419px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-digg {
+    background: url('../src/assets/img/sprit.png') no-repeat -519px -1419px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-tumblr {
+    background: url('../src/assets/img/sprit.png') no-repeat -619px -1419px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-lastfm {
+    background: url('../src/assets/img/sprit.png') no-repeat -719px -1419px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-nav-compact {
+    background: url('../src/assets/img/sprit.png') no-repeat -30px -1530px;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-nav-close {
+    background: url('../src/assets/img/sprit.png') no-repeat -130px -1530px;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-html5 {
+    background: url('../src/assets/img/sprit.png') no-repeat -219px -1520px;
+    width: 58px;
+    height: 64px;
+}
+
+.icon-css3 {
+    background: url('../src/assets/img/sprit.png') no-repeat -325px -1520px;
+    width: 56px;
+    height: 63px;
+}
+
+.icon-touch {
+    background: url('../src/assets/img/sprit.png') no-repeat -424px -1518px;
+    width: 67px;
+    height: 73px;
+}
+
+.icon-pinterest {
+    background: url('../src/assets/img/sprit.png') no-repeat -119px -1516px;
+    width: 62px;
+    height: 62px;
+}
+
+.icon-mail-reply{
+    background: url('../src/assets/img/sprit.png') no-repeat -23px -1513px;
+    width: 62px;
+    height: 62px;
+}

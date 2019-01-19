@@ -1,0 +1,122 @@
+/* Eric Meyer's CSS Reset */
+/*-----------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*font: inherit;*/
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*-----------------------------------------------------------------------------*/
+/* End of Eric Meyer's CSS Reset */
+
+
+/*Material-icons*/
+/*-----------------------------------------------------------------------------*/
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+/* Rules for sizing the icon. */
+.material-icons.md-14 { font-size: 14px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+/* Rules for color the icon. */
+.material-icons.beluga { color: #4a4843}
+/*-----------------------------------------------------------------------------*/
+/*End Material-icons*/
+
+
+/*Fonts*/
+/*-----------------------------------------------------------------------------*/
+@font-face {
+    font-family: Raleway;
+    src: url('/fonts/RalewayBold/ralewaybold.woff2') format('woff2');
+    src: url('/fonts/RalewayBold/ralewaybold.woff') format('woff');
+    src: url('/fonts/RalewayBold/ralewaybold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: Lato Light;
+    src: local('Lato Light'), local('Lato-Light'),url('/fonts/LatoLight/latolight.woff2') format('woff2');
+    src: url('/fonts/LatoLight/latolight.woff') format('woff');
+    src: url('/fonts/LatoLight/latolight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: Lato Regular;
+    src: local('Lato Regular'), local('Lato-Regular'),
+    url('/fonts/LatoRegular/latoregular.woff2') format('woff2');
+    src: url('/fonts/LatoRegular/latoregular.woff') format('woff');
+    src: url('/fonts/LatoRegular/latoregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: EntypoSocial;
+    src: local('Entypo Social'), local('Entypo-Social'),
+    url('/fonts/EntypoSocial/entypo-social.ttf') format('truetype');
+    src: url('/fonts/EntypoSocial/Entypo-Social.otf') format('otf');
+    font-weight: 400;
+    font-style: normal;
+}
+/*-----------------------------------------------------------------------------*/
+/*End Fonts*/
