@@ -3,10 +3,10 @@ import "./main.css";
 import Article from '../Article/Article';
 import Pagination from '../pagination/Pagination';
 import Slider from '../slider/Slider';
-import massarticles from '../massarticles';
+import axios from 'axios';
+import kotik from '../../assets/img/slide1.jpg';
 
 // dummy slides data (фиктивные слайды данных)
-import kotik from '../../assets/img/slide1.jpg';
 const dummiSlides = [
     {
         id:1,
@@ -26,14 +26,33 @@ const dummiSlides = [
 ];
 
 export default class Main extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            articles: undefined
+        }
+    }
+
+    componentDidMount() {
+        axios.get('/articles')
+            .then(response => this.setState({articles: response.data}))
+            .catch(error => {
+                // handle error
+                console.log('/articles get error', error);
+            });
+    }
 
     render(){
-        const articleCount = massarticles.length;
+        const {articles} = this.state;
         let articleContainer;
-        if (articleCount > 0){
+
+        if (articles === undefined) {//ответ еще не получили
+            articleContainer = <div>Получаем статьи</div>
+            // articleContainer = <spiner/>
+        } else if (articles.length) {//норм ответ со статьями
             articleContainer = <div className="container">
                 {
-                    massarticles.map((article, index) => {
+                    articles.map((article, index) => {
                         return <Article
                             key={article.id}
                             img={article.image}
@@ -52,6 +71,8 @@ export default class Main extends React.Component{
                 />
             </div>
 
+        } else {//получили пустой ответ
+            articleContainer = <div>Нет статей</div>
         }
         return(
             <main className="middle">
