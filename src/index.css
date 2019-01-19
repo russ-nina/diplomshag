@@ -87,34 +87,34 @@ table {
 /*-----------------------------------------------------------------------------*/
 @font-face {
     font-family: Raleway;
-    src: url('/fonts/RalewayBold/ralewaybold.woff2') format('woff2');
-    src: url('/fonts/RalewayBold/ralewaybold.woff') format('woff');
-    src: url('/fonts/RalewayBold/ralewaybold.ttf') format('truetype');
+    src: url('/src/assets/fonts/RalewayBold/ralewaybold.woff2') format('woff2');
+    src: url('/src/assets/fonts/RalewayBold/ralewaybold.woff') format('woff');
+    src: url('/src/assets/fonts/RalewayBold/ralewaybold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
 @font-face {
     font-family: Lato Light;
-    src: local('Lato Light'), local('Lato-Light'),url('/fonts/LatoLight/latolight.woff2') format('woff2');
-    src: url('/fonts/LatoLight/latolight.woff') format('woff');
-    src: url('/fonts/LatoLight/latolight.ttf') format('truetype');
+    src: local('Lato Light'), local('Lato-Light'),url('/src/assets/fonts/LatoLight/latolight.woff2') format('woff2');
+    src: url('/src/assets/fonts/LatoLight/latolight.woff') format('woff');
+    src: url('/src/assets/fonts/LatoLight/latolight.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: Lato Regular;
     src: local('Lato Regular'), local('Lato-Regular'),
-    url('/fonts/LatoRegular/latoregular.woff2') format('woff2');
-    src: url('/fonts/LatoRegular/latoregular.woff') format('woff');
-    src: url('/fonts/LatoRegular/latoregular.ttf') format('truetype');
+    url('/src/assets/fonts/LatoRegular/latoregular.woff2') format('woff2');
+    src: url('/src/assets/fonts/LatoRegular/latoregular.woff') format('woff');
+    src: url('/src/assets/fonts/LatoRegular/latoregular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: EntypoSocial;
     src: local('Entypo Social'), local('Entypo-Social'),
-    url('/fonts/EntypoSocial/entypo-social.ttf') format('truetype');
-    src: url('/fonts/EntypoSocial/Entypo-Social.otf') format('otf');
+    url('/src/assets/fonts/EntypoSocial/entypo-social.ttf') format('truetype');
+    src: url('/src/assets/fonts/EntypoSocial/Entypo-Social.otf') format('otf');
     font-weight: 400;
     font-style: normal;
 }
