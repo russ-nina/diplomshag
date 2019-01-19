@@ -5,6 +5,26 @@ import Pagination from '../pagination/Pagination';
 import Slider from '../slider/Slider';
 import massarticles from '../massarticles';
 
+// dummy slides data (фиктивные слайды данных)
+import kotik from '../../assets/img/slide1.jpg';
+const dummiSlides = [
+    {
+        id:1,
+        title: "Hello!",
+        src: kotik
+    },
+    {
+        id:2,
+        title: "Hello2!",
+        src: kotik
+    },
+    {
+        id:3,
+        title: "Hello3!",
+        src: kotik
+    }
+];
+
 export default class Main extends React.Component{
 
     render(){
@@ -27,7 +47,9 @@ export default class Main extends React.Component{
                     })
                 }
                 <Pagination/>
-                <Slider/>
+                <Slider
+                    slideList={dummiSlides}
+                />
             </div>
 
         }
