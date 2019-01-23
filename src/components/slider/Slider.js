@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
+import "./slider.css";
 
 export default class Slider extends Component {
     render() {
@@ -17,9 +18,11 @@ export default class Slider extends Component {
         });
 
         return (
-            <Carousel>
-                {slids}
-            </Carousel>
+            <div className="slider_main_page">
+                <Carousel>
+                    {slids}
+                </Carousel>
+            </div>
         );
     }
 }

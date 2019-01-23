@@ -52,6 +52,9 @@ export default class Main extends React.Component{
             // articleContainer = <spiner/>
         } else if (articles.length) {//норм ответ со статьями
             articleContainer = <div className="container">
+                <Slider
+                    slideList={dummiSlides}
+                />
                 {
                     articles.map((article, index) => {
                         return <Article
@@ -67,9 +70,7 @@ export default class Main extends React.Component{
                     })
                 }
                 <Pagination/>
-                <Slider
-                    slideList={dummiSlides}
-                />
+
             </div>
 
         } else {//получили пустой ответ
