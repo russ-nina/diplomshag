@@ -3,6 +3,7 @@ import "./main.css";
 import Article from '../Article/Article';
 import Pagination from '../pagination/Pagination';
 import Slider from '../slider/Slider';
+import Preloader from '../spiner/Preloader';
 import axios from 'axios';
 import kotik from '../../assets/img/slide1.jpg';
 
@@ -47,7 +48,7 @@ export default class Main extends React.Component{
         let articleContainer;
 
         if (articles === undefined) {//ответ еще не получили
-            articleContainer = <div>Получаем статьи</div>
+            articleContainer = <Preloader/>
             // articleContainer = <spiner/>
         } else if (articles.length) {//норм ответ со статьями
             articleContainer = <div className="container">
