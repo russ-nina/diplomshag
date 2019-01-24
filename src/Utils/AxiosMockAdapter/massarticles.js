@@ -1,6 +1,7 @@
 export default [
     {
         id:1,
+        sumcomments:5,
         image: 'https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjC0q-0ifrfAhVI_ywKHQICAYMQjRx6BAgBEAU&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DmK72EwuxZAU&psig=AOvVaw3O6CWYygGgeCYqxy6HjyFF&ust=1547995138077842',
         headline:"Brazil deploys troops to stop violence in Fortaleza",
         info:{
@@ -23,6 +24,7 @@ export default [
     },
     {
         id:2,
+        sumcomments:1,
         image:"",
         headline:"Brexit: PM says vote on her deal will 'definitely' go ahead",
         info:{
@@ -47,6 +49,7 @@ export default [
     },
     {
         id:3,
+        sumcomments:9,
         image:"",
         headline:"I met my boyfriend 12 years after giving birth to his child",
         info:{
@@ -79,6 +82,7 @@ export default [
     },
     {
         id:4,
+        sumcomments:3,
         image:"",
         headline:" after giving birth to his child",
         info:{
@@ -111,6 +115,7 @@ export default [
     },
     {
         id:5,
+        sumcomments:4,
         image:"",
         headline:" Luckily, we discovered a sperm bank that shipped",
         info:{
@@ -143,6 +148,7 @@ export default [
     },
     {
         id:6,
+        sumcomments:2,
         image:"",
         headline:"When my eldest daughter was born",
         info:{

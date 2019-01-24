@@ -16,6 +16,7 @@
     color: #f1f1f1;
     font-family: Lato Regular, sans-serif;
     opacity: 0.5;
+    border-radius: 0;
 }
 .carousel.carousel-slider .control-arrow{
     background-color: #4a4843;

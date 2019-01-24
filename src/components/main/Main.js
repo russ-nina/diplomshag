@@ -4,6 +4,7 @@ import Article from '../Article/Article';
 import Pagination from '../pagination/Pagination';
 import Slider from '../slider/Slider';
 import Preloader from '../spiner/Preloader';
+import GroupedArticle from '../groupedArticle/GroupedArticle';
 import axios from 'axios';
 import kotik from '../../assets/img/slide1.jpg';
 
@@ -46,9 +47,11 @@ export default class Main extends React.Component{
     render(){
         const {articles} = this.state;
         let articleContainer;
+        let filterArticle;
 
         if (articles === undefined) {//ответ еще не получили
-            articleContainer = <Preloader/>
+            articleContainer = <Preloader/>;
+            filterArticle = <Preloader/>
             // articleContainer = <spiner/>
         } else if (articles.length) {//норм ответ со статьями
             articleContainer = <div className="container">
@@ -70,17 +73,28 @@ export default class Main extends React.Component{
                     })
                 }
                 <Pagination/>
-
             </div>
-
+            filterArticle = <div className="filter_article_cover">
+                {
+                    articles.map((article, index) => {
+                        return <GroupedArticle
+                            key={article.id}
+                            img={article.image}
+                            rank={article.info.rank}
+                            title={article.headline}
+                            sumcomments={article.sumcomments}
+                        />
+                    })
+                }
+            </div>
         } else {//получили пустой ответ
             articleContainer = <div>Нет статей</div>
+            filterArticle = <div>Нет статей</div>
         }
+
         return(
             <main className="middle">
-
                 {articleContainer}
-
                 <aside className="right_sidebar">
                     <div className="search">
                         <p>Search</p>
@@ -92,32 +106,7 @@ export default class Main extends React.Component{
                             <div className="popular"><p>Popular</p></div>
                             <div className="archived"><p>Archived</p></div>
                         </div>
-                        <div className="filter_article_cover">
-                            <div className="filter_article">
-                                <div className="filter_article_image"><img src="img/a1.jpg" alt=""/></div>
-                                <div className="filter_article_headline"><h5><a href="#">Brazil deploys troops to stop
-                                    violence in Fortaleza</a></h5></div>
-                                <div className="filter_article_comment"><p>6 Comments</p></div>
-                            </div>
-                            <div className="filter_article">
-                                <div className="filter_article_image"><img src="img/b2.png" alt=""/></div>
-                                <div className="filter_article_headline"><h5><a href="#">Brexit: PM says vote on her
-                                    deal will 'definitely' go ahead</a></h5></div>
-                                <div className="filter_article_comment"><p>2 Comments</p></div>
-                            </div>
-                            <div className="filter_article">
-                                <div className="filter_article_image"><img src="img/c3.jpg" alt=""/></div>
-                                <div className="filter_article_headline"><h5><a href="#">I met my boyfriend 12 years
-                                    after giving birth to his child</a></h5></div>
-                                <div className="filter_article_comment"><p>3 Comments</p></div>
-                            </div>
-                            <div className="filter_article">
-                                <div className="filter_article_image"><img src="img/d4.jpg" alt=""/></div>
-                                <div className="filter_article_headline"><h5><a href="#">After giving birth to his
-                                    child</a></h5></div>
-                                <div className="filter_article_comment"><p>9 Comments</p></div>
-                            </div>
-                        </div>
+                        {filterArticle}
                     </div>
                     <div className="comments_block">
                         <div className="comments_category">
