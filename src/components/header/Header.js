@@ -1,8 +1,23 @@
 import React from 'react';
 import "./header.css";
+import Article from "../Article/Article";
 
 export default class Header extends React.Component{
+    onCategoryClick = (e) => {
+        e.preventDefault();
+
+        this.props.onCategoryClick(e.currentTarget.dataset.category);
+    };
+
     render(){
+        var categories = this.props.categories.map((category, index) => {
+            const activeClassName = category === this.props.selectedCategory ? `nav_active` : '';
+
+            return <li data-category={category}
+                       onClick={this.onCategoryClick}
+            ><a className={`nav ${activeClassName}`} href="#">{category}</a></li>
+        });
+
         return(
             <header>
                 <div className="local_date"><a href="#">06 January 2019</a></div>
@@ -12,14 +27,8 @@ export default class Header extends React.Component{
                     </a>
                 </div>
                 <nav>
-                    <ul className="navigation">
-                        <li><a className="nav nav_active" href="#">Home</a></li>
-                        <li><a className="nav" href="#">World</a></li>
-                        <li><a className="nav" href="#">Sport</a></li>
-                        <li><a className="nav" href="#">Weather</a></li>
-                        <li><a className="nav" href="#">Stories</a></li>
-                        <li><a className="nav" href="#">Politics</a></li>
-                        <li><a className="nav" href="#">Other</a></li>
+                    <ul className="navigation ">
+                        {categories}
                     </ul>
                 </nav>
             </header>

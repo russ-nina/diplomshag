@@ -39,6 +39,7 @@ header:hover{
 }
 .site_name{
     font-family: Raleway, sans-serif;
+    font-weight: bold;
     font-size: 110px;
     color: white;
     text-decoration: none;
@@ -59,6 +60,7 @@ header:hover{
 }
 .navigation li{
     margin-right: 15px;
+    margin-bottom: 10px;
 }
 .navigation li a{
     transition-duration: .3s;
@@ -71,6 +73,15 @@ header:hover{
     color: white;
     font-family: Lato Regular, sans-serif;
     font-size: 24px;
+}
+/*Добавляется класс в js при скроле страницы, меню уходи и фиксируется слева*/
+.navigation_fixed{
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(74, 72, 67, .6);
+    width: auto;
+    flex-direction: column;
 }
 /*-----------------------------------------------------------------------------*/
 /*End Header*/

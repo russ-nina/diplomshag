@@ -1,74 +1,68 @@
 import React from 'react';
 import "./main.css";
 import Article from '../Article/Article';
+import FullArticle from '../FullArticle/FullArticle';
 import Pagination from '../pagination/Pagination';
 import Slider from '../slider/Slider';
 import Preloader from '../spiner/Preloader';
 import GroupedArticle from '../groupedArticle/GroupedArticle';
 import axios from 'axios';
-import kotik from '../../assets/img/slide1.jpg';
+import slide1 from '../../assets/img/slide1.jpg';
+import slide2 from '../../assets/img/slide2.jpg';
+import slide3 from '../../assets/img/slide3.jpg';
 
 // dummy slides data (фиктивные слайды данных)
 const dummiSlides = [
     {
         id:1,
         title: "Hello!",
-        src: kotik
+        src: slide1
     },
     {
         id:2,
         title: "Hello2!",
-        src: kotik
+        src: slide2
     },
     {
         id:3,
         title: "Hello3!",
-        src: kotik
+        src: slide3
     }
 ];
-
+const DESCRIPTION_LENGTH = 250;
 export default class Main extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            articles: undefined
-        }
-    }
-
-    componentDidMount() {
-        axios.get('/articles')
-            .then(response => this.setState({articles: response.data}))
-            .catch(error => {
-                // handle error
-                console.log('/articles get error', error);
-            });
-    }
 
     render(){
-        const {articles} = this.state;
-        let articleContainer;
+        const articles = this.props.articles;
+        const selectedArticle = this.props.selectedArticle;
+
+        let articleListContainer;
         let filterArticle;
 
         if (articles === undefined) {//ответ еще не получили
-            articleContainer = <Preloader/>;
+            articleListContainer = <Preloader/>;
             filterArticle = <Preloader/>
-            // articleContainer = <spiner/>
+            // articleListContainer = <spiner/>
         } else if (articles.length) {//норм ответ со статьями
-            articleContainer = <div className="container">
+            articleListContainer = <div className="container">
                 <Slider
                     slideList={dummiSlides}
                 />
                 {
                     articles.map((article, index) => {
+                        const description = article.text.substring(0, DESCRIPTION_LENGTH);
+
                         return <Article
                             key={article.id}
+                            id={article.id}
                             img={article.image}
                             title={article.headline}
                             date={article.info.date}
                             author={article.info.author}
                             rank={article.info.rank}
                             tags={article.info.tags}
-                            description={article.description}
+                            description={description}
+                            onArticleClick={() => this.props.setSelectedArticle(article)}
                         />
                     })
                 }
@@ -88,13 +82,29 @@ export default class Main extends React.Component{
                 }
             </div>
         } else {//получили пустой ответ
-            articleContainer = <div>Нет статей</div>
+            articleListContainer = <div>Нет статей</div>
             filterArticle = <div>Нет статей</div>
+        }
+        let content;
+        if (selectedArticle){
+            content = <FullArticle
+
+                id={selectedArticle.id}
+                img={selectedArticle.image}
+                title={selectedArticle.headline}
+                date={selectedArticle.info.date}
+                author={selectedArticle.info.author}
+                rank={selectedArticle.info.rank}
+                tags={selectedArticle.info.tags}
+                text={selectedArticle.text}
+            />;
+        } else {
+            content = articleListContainer;
         }
 
         return(
             <main className="middle">
-                {articleContainer}
+                {content}
                 <aside className="right_sidebar">
                     <div className="search">
                         <p>Search</p>
@@ -114,19 +124,19 @@ export default class Main extends React.Component{
                         </div>
                         <div className="comments">
                             <div className="comment">
-                                <div className="user_avatar"><img src="img/avatarsiluet.jpg" alt="Robert Miles"/></div>
+                                <div className="user_avatar"><img src="https://st3.depositphotos.com/1007566/13342/v/1600/depositphotos_133421882-stock-illustration-silhouette-user-avatar-icon.jpg" alt="Robert Miles"/></div>
                                 <div className="user_name"><h5>Robert Miles</h5></div>
                                 <div className="user_comment"><p>Lorem ipsum dolor sit eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua. </p></div>
                             </div>
                             <div className="comment">
-                                <div className="user_avatar"><img src="img/avatarsiluet.jpg" alt="Robert Miles"/></div>
+                                <div className="user_avatar"><img src="https://previews.123rf.com/images/stockgiu/stockgiu1710/stockgiu171001699/87844977-silhouette-default-avatar-man-to-social-user.jpg" alt="Robert Miles"/></div>
                                 <div className="user_name"><h5>Mick Jagger</h5></div>
                                 <div className="user_comment"><p>Lorem ipsum dolor sit eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua dolore magna aliqua. </p></div>
                             </div>
                             <div className="comment">
-                                <div className="user_avatar"><img src="img/avatarsiluet.jpg" alt="Robert Miles"/></div>
+                                <div className="user_avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSKay168kHfQUpu3SXG_FAAYbVVW98N_Y2D9EEIUROHTlOQD1VbA" alt="Robert Miles"/></div>
                                 <div className="user_name"><h5>Steven Spielberg</h5></div>
                                 <div className="user_comment"><p>Lorem ipsum dolor sit eiusmod tempor . </p></div>
                             </div>

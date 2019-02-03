@@ -8,5 +8,6 @@ if (process.env.NODE_ENV === 'development') {
 // Mock any GET request to /users
 // arguments for reply are (status, data, headers)
     mock.onGet('/articles').reply(200, massarticles);
+    mock.onGet('/articles/world').reply(200, massarticles);
 }
 
