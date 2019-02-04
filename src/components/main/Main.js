@@ -6,6 +6,7 @@ import Pagination from '../pagination/Pagination';
 import Slider from '../slider/Slider';
 import Preloader from '../spiner/Preloader';
 import GroupedArticle from '../groupedArticle/GroupedArticle';
+import FilterCategory from '../FilterCategory/FilterCategory';
 
 
 const DESCRIPTION_LENGTH = 350;
@@ -21,7 +22,6 @@ export default class Main extends React.Component{
         if (articles === undefined) {//ответ еще не получили
             articleListContainer = <Preloader/>;
             filterArticle = <Preloader/>
-            // articleListContainer = <spiner/>
         } else if (articles.length) {//норм ответ со статьями
             articleListContainer = <div className="container">
                 {
@@ -88,14 +88,10 @@ export default class Main extends React.Component{
                 <aside className="right_sidebar">
                     <div className="search">
                         <p>Search</p>
-                        <input type="search" placeholder="type an hit enter"/>
+                        <input type="search" placeholder="type and hit enter"/>
                     </div>
                     <div className="filter">
-                        <div className="filter_headline">
-                            <div className="recent active"><p>Recent</p></div>
-                            <div className="popular"><p>Popular</p></div>
-                            <div className="archived"><p>Archived</p></div>
-                        </div>
+                        <FilterCategory/>
                         {filterArticle}
                     </div>
                     <div className="comments_block">

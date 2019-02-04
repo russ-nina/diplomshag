@@ -10,12 +10,15 @@ export default class Header extends React.Component{
     };
 
     render(){
-        var categories = this.props.categories.map((category, index) => {
+        let categories = this.props.categories.map((category, index) => {
             const activeClassName = category === this.props.selectedCategory ? `nav_active` : '';
 
             return <li data-category={category}
                        onClick={this.onCategoryClick}
-            ><a className={`nav ${activeClassName}`} href="#">{category}</a></li>
+                       key={index}
+            >
+                <a className={`nav ${activeClassName}`} href="#">{category}</a>
+            </li>
         });
 
         return(
