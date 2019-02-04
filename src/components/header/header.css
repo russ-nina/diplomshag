@@ -73,6 +73,7 @@ header:hover{
     color: white;
     font-family: Lato Regular, sans-serif;
     font-size: 24px;
+    text-transform: capitalize;
 }
 /*Добавляется класс в js при скроле страницы, меню уходи и фиксируется слева*/
 .navigation_fixed{

@@ -6,30 +6,9 @@ import Pagination from '../pagination/Pagination';
 import Slider from '../slider/Slider';
 import Preloader from '../spiner/Preloader';
 import GroupedArticle from '../groupedArticle/GroupedArticle';
-import axios from 'axios';
-import slide1 from '../../assets/img/slide1.jpg';
-import slide2 from '../../assets/img/slide2.jpg';
-import slide3 from '../../assets/img/slide3.jpg';
 
-// dummy slides data (фиктивные слайды данных)
-const dummiSlides = [
-    {
-        id:1,
-        title: "Hello!",
-        src: slide1
-    },
-    {
-        id:2,
-        title: "Hello2!",
-        src: slide2
-    },
-    {
-        id:3,
-        title: "Hello3!",
-        src: slide3
-    }
-];
-const DESCRIPTION_LENGTH = 250;
+
+const DESCRIPTION_LENGTH = 350;
 export default class Main extends React.Component{
 
     render(){
@@ -45,9 +24,6 @@ export default class Main extends React.Component{
             // articleListContainer = <spiner/>
         } else if (articles.length) {//норм ответ со статьями
             articleListContainer = <div className="container">
-                <Slider
-                    slideList={dummiSlides}
-                />
                 {
                     articles.map((article, index) => {
                         const description = article.text.substring(0, DESCRIPTION_LENGTH);
@@ -67,6 +43,9 @@ export default class Main extends React.Component{
                     })
                 }
                 <Pagination/>
+                <Slider
+                    slideList={articles}
+                />
             </div>
             filterArticle = <div className="filter_article_cover">
                 {
@@ -91,6 +70,7 @@ export default class Main extends React.Component{
 
                 id={selectedArticle.id}
                 img={selectedArticle.image}
+                slides_img={selectedArticle.slides_img}
                 title={selectedArticle.headline}
                 date={selectedArticle.info.date}
                 author={selectedArticle.info.author}

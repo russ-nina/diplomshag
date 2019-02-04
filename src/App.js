@@ -7,16 +7,17 @@ import AxiosMockAdapter from './Utils/AxiosMockAdapter/AxiosMockAdapter';
 import axios from "axios";
 
 const CATEGORIES = {
-    ALL: "all",
+    HOME: "home",
     WORLD: "world",
-    OTHER: "other"
+    STORIES: "stories",
+    SPORT: "sport"
 };
 
 class App extends Component {
     constructor(props){
         super(props);
         this.state = {
-            selectedCategory: CATEGORIES.ALL,
+            selectedCategory: CATEGORIES.HOME,
             articles: undefined,
             selectedArticle: undefined
         }
@@ -50,7 +51,7 @@ class App extends Component {
 
         let articlesUrl = '/articles';
 
-        if (category && category !== CATEGORIES.ALL) {
+        if (category && category !== CATEGORIES.HOME) {
             articlesUrl = `/articles/${category}`;
         }
 

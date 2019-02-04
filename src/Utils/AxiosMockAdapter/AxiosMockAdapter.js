@@ -9,5 +9,6 @@ if (process.env.NODE_ENV === 'development') {
 // arguments for reply are (status, data, headers)
     mock.onGet('/articles').reply(200, massarticles);
     mock.onGet('/articles/world').reply(200, massarticles);
+    mock.onGet('/articles/stories').reply(200, massarticles);
 }
 

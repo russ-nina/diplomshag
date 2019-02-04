@@ -11,8 +11,8 @@ export default class Slider extends Component {
                 <div
                     key={slide.id}
                 >
-                    <img src={slide.src}/>
-                    <p className="legend">{slide.title}</p>
+                    <img src={slide.image}/>
+                    <p className="legend">{slide.headline}</p>
                 </div>
             );
         });

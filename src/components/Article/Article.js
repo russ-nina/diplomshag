@@ -17,7 +17,7 @@ export default class Article extends React.Component{
                     <div className="tags"><i className="material-icons md-18 beluga">local_offer</i><p>Tags: <a
                         className="coral" href="#">{this.props.tags}</a></p></div>
                 </div>
-                <div className="description"><p>{this.props.description}</p></div>
+                <div className="description"><p>{this.props.description}...<span className="read_all">read all...</span></p></div>
             </article>
         );
     }

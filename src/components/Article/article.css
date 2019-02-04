@@ -1,13 +1,13 @@
 /*Article*/
 /*-----------------------*/
 .content{
-    height: 250px;
+    hmin-height: 100px;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    overflow: hidden;
+    grid-template-rows: repeat(3, 1fr);
     margin-top: 25px;
     cursor: pointer;
+    padding: 5px;
 }
 .content:hover{
     background-color: #f1f1f1;
@@ -15,7 +15,7 @@
 }
 .image{
     grid-column: 1/4;
-    grid-row: 1/7;
+    grid-row: 1/4;
     overflow: hidden;
 }
 .image img{
@@ -55,13 +55,19 @@
 }
 .description{
     grid-column: 4/10;
-    grid-row: 3/7;
+    grid-row: 3/4;
     margin-left: 15px;
 }
 .description p{
     font-family: Lato Light, sans-serif;
     font-size: 14px;
     color: #4a4843;
+}
+.read_all{
+    color: #ff6f61;
+    font-size: 12px;
+    font-family: Lato Light, sans-serif;
+    font-style: italic;
 }
 /*-----------------------*/
 /*End Article*/
