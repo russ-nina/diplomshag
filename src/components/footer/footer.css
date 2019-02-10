@@ -22,32 +22,17 @@
     align-items: center;
     padding: 25px 0 25px 0;
 }
-.our_history, .our_team, .how_we_do_it, .contacts{
+.footer_pages{
     margin-right: 25px;
 }
-.our_history p, .our_team p, .how_we_do_it p, .contacts p{
+.footer_pages p{
     color: #f1f1f1;
     font-family: Lato Regular, sans-serif;
     font-size: 24px;
     text-transform: capitalize;
     transition-duration: .3s;
 }
-.our_history:hover p{
-    color: #ff6f61;
-    text-decoration: underline;
-    cursor: pointer;
-}
-.our_team:hover p{
-    color: #ff6f61;
-    text-decoration: underline;
-    cursor: pointer;
-}
-.how_we_do_it:hover p{
-    color: #ff6f61;
-    text-decoration: underline;
-    cursor: pointer;
-}
-.contacts:hover p{
+.footer_pages:hover p{
     color: #ff6f61;
     text-decoration: underline;
     cursor: pointer;

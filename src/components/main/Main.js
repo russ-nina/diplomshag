@@ -2,6 +2,7 @@ import React from 'react';
 import "./main.css";
 import Article from '../Article/Article';
 import FullArticle from '../FullArticle/FullArticle';
+import FullPage from '../FullPage/FullPage';
 import Pagination from '../pagination/Pagination';
 import Slider from '../slider/Slider';
 import Preloader from '../spiner/Preloader';
@@ -12,16 +13,11 @@ import FilterCategory from '../FilterCategory/FilterCategory';
 const DESCRIPTION_LENGTH = 350;
 export default class Main extends React.Component{
 
-    render(){
-        const articles = this.props.articles;
-        const selectedArticle = this.props.selectedArticle;
-
+    getArticlesList = (articles) => {
         let articleListContainer;
-        let filterArticle;
 
         if (articles === undefined) {//ответ еще не получили
             articleListContainer = <Preloader/>;
-            filterArticle = <Preloader/>
         } else if (articles.length) {//норм ответ со статьями
             articleListContainer = <div className="container">
                 {
@@ -46,7 +42,19 @@ export default class Main extends React.Component{
                 <Slider
                     slideList={articles}
                 />
-            </div>
+            </div>;
+        } else {//получили пустой ответ
+            articleListContainer = <div>Нет статей</div>
+        }
+
+        return articleListContainer;
+    };
+
+    getFilterArticlesList = (articles) => {
+        let filterArticle;
+        if (articles === undefined) {//ответ еще не получили
+            filterArticle = <Preloader/>
+        } else if (articles.length) {//норм ответ со статьями
             filterArticle = <div className="filter_article_cover">
                 {
                     articles.map((article, index) => {
@@ -61,9 +69,19 @@ export default class Main extends React.Component{
                 }
             </div>
         } else {//получили пустой ответ
-            articleListContainer = <div>Нет статей</div>
             filterArticle = <div>Нет статей</div>
         }
+
+        return filterArticle;
+    };
+
+    render(){
+        const articles = this.props.articles;
+        const selectedArticle = this.props.selectedArticle;
+        const selectedPage = this.props.selectedPage;
+
+        const filterArticle = this.getFilterArticlesList(articles);
+
         let content;
         if (selectedArticle){
             content = <FullArticle
@@ -78,8 +96,16 @@ export default class Main extends React.Component{
                 tags={selectedArticle.info.tags}
                 text={selectedArticle.text}
             />;
-        } else {
-            content = articleListContainer;
+        } else if(selectedPage){
+            content = <FullPage
+                id={selectedPage.id}
+                img={selectedPage.image}
+                title={selectedPage.title}
+                text={selectedPage.text}
+            />
+        }
+        else {
+            content = this.getArticlesList(articles);
         }
 
         return(

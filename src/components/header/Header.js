@@ -2,16 +2,49 @@ import React from 'react';
 import "./header.css";
 import Article from "../Article/Article";
 
-export default class Header extends React.Component{
+export default class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            fixedMenu: false
+        }
+    };
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.hendleScroll);
+    };
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.hendleScroll);
+    };
+
+    hendleScroll = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        let fixedElem = this.navRefEl;
+        let fixedElemSourceTop = fixedElem.getBoundingClientRect().top + window.pageYOffset;
+        let fixedMenu = window.pageYOffset > fixedElemSourceTop;
+
+        this.setState({fixedMenu: fixedMenu});
+    };
+
     onCategoryClick = (e) => {
         e.preventDefault();
 
         this.props.onCategoryClick(e.currentTarget.dataset.category);
     };
 
-    render(){
+    setNavRef = (node) => {
+        this.navRefEl = node;
+    };
+
+    render() {
+        let fixedMenu = this.state.fixedMenu;
+        let fixedClassMenu = fixedMenu ? 'navigation_fixed' : '';
         let categories = this.props.categories.map((category, index) => {
-            const activeClassName = category === this.props.selectedCategory ? `nav_active` : '';
+            let selectedCategory = this.props.selectedCategory;
+            const activeClassName = category === selectedCategory ? `nav_active` : '';
 
             return <li data-category={category}
                        onClick={this.onCategoryClick}
@@ -21,7 +54,7 @@ export default class Header extends React.Component{
             </li>
         });
 
-        return(
+        return (
             <header>
                 <div className="local_date"><a href="#">06 January 2019</a></div>
                 <div className="head">
@@ -29,8 +62,10 @@ export default class Header extends React.Component{
                         news&<br/>articles
                     </a>
                 </div>
-                <nav>
-                    <ul className="navigation ">
+                <nav
+                    ref={this.setNavRef}
+                >
+                    <ul className={`navigation ${fixedClassMenu}`} id="navigation">
                         {categories}
                     </ul>
                 </nav>

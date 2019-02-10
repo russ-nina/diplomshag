@@ -1,0 +1,60 @@
+/*Article*/
+/*-----------------------*/
+.container_full{
+    grid-column: 1/10;
+    min-height: 900px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+.content_full{
+    min-height: 100px;
+    margin-top: 25px;
+    padding: 5px;
+}
+.image_full{
+    overflow: hidden;
+}
+.image_full img{
+    width: 100%;
+}
+.headline_full{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.headline_full h2 a{
+    font-size: 32px;
+    font-family: Lato Regular, sans-serif;
+    color: #4a4843;
+}
+.headline h2:hover a{
+    text-decoration: underline;
+}
+.text_full{
+    margin-top: 25px;
+}
+.text_full p{
+    font-family: Lato Light, sans-serif;
+    font-size: 18px;
+    color: #4a4843;
+    line-height: 1.5em;
+}
+/*-----------------------*/
+/*End Article*/
+
+/*General rules*/
+/*-----------------------------------------------------------------------------*/
+a{
+    text-decoration: none;
+}
+.coral{
+    color: #ff6f61;
+}
+.active{
+    background-color: #ff6f61;
+}
+.nav_active{
+    text-decoration: underline;
+}
+/*-----------------------------------------------------------------------------*/
+/*End General rules*/

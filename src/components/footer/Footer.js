@@ -1,18 +1,37 @@
 import React from 'react';
 import './footer.css';
 import './sprite/sprite.css';
+import Preloader from '../spiner/Preloader';
 
 export default class Footer extends React.Component{
+    onPageClick = (page) => {
+        this.props.onPageClick(page);
+        // let activeClassName = page === this.props.selectedPage ? `nav_active` : '';
+    };
     render(){
+        let activeClassName = "";
+        let pages = this.props.pages;
+        if (pages === undefined){
+            pages = <Preloader/>;
+        } else if (pages.length){
+            pages = pages.map((page, index) => {
+                return <div
+                    key={page.id}
+                    onClick={() => this.onPageClick(page)}
+                    data-page={page.alias}
+                    className={`footer_pages ${activeClassName}`}>
+                    <p>{page.title}</p>
+                </div>
+            });
+        } else {
+            pages = <div>Нет страниц</div>
+        }
         return(
             <footer className="footer">
                 <div className="footer_cover">
                     <div className="footer_left_side">
                         <div className="main_info">
-                            <div className="our_history"><p>Our history</p></div>
-                            <div className="our_team"><p>Our team</p></div>
-                            <div className="how_we_do_it"><p>How we do it</p></div>
-                            <div className="contacts"><p>Contacts</p></div>
+                            {pages}
                         </div>
                         <div className="copyright"><p>Copyright 2019 | All Right Reserved by Nina</p></div>
                     </div>

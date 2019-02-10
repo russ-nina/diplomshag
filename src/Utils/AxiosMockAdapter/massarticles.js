@@ -16,7 +16,7 @@ export default [
             },
             {
                 id:3,
-                image: "https://www.1zoom.ru/big2/62/185130-melisenta.jpg",
+                image: "https://i1.rozetka.ua/goods/4684671/41692840_images_4684671144.jpg",
                 headline:"Brazil deploys troops to stop violence in Fortaleza",
             }
         ],
