@@ -23,19 +23,18 @@ export default class Main extends React.Component{
         super(props);
         this.state = {
             selectedFilterCategory: FILTER_CATEGORIES.WEIGHTY,
+            filteredArticles: undefined,
         }
     };
-    // componentDidMount() {
-    //     this.getFilterArticlesList(this.state.selectedFilterCategory);
-    // };
+    componentDidMount() {
+        this.getFilterArticles(this.state.selectedFilterCategory);
+    };
     setSelectedFilterCategory = (filterCategory) => {
         this.setState({selectedFilterCategory: filterCategory});
     };
     onFilterCategoryClick = (filterCategory) => {
-        // this.setSelectedArticle(undefined);
-        // this.setSelectedPage(undefined);
         this.setSelectedFilterCategory(filterCategory);
-        // this.getArticles(category);
+        this.getFilterArticles(filterCategory);
     };
 
     getArticlesList = (articles) => {
@@ -75,20 +74,34 @@ export default class Main extends React.Component{
         return articleListContainer;
     };
 
-    getFilterArticlesList = (articles) => {
+    getFilterArticles = (filterCategory) => {
+        this.setState({filteredArticles: undefined});
+        let filteredArticlesUrl = '/filteredarticles';
+        if (filterCategory && filterCategory !== FILTER_CATEGORIES.WEIGHTY) {
+            filteredArticlesUrl = `/filteredarticles/${filterCategory}`;
+        }
+        axios.get(filteredArticlesUrl)
+            .then(response => this.setState({filteredArticles: response.data}))
+            .catch(error => {
+                // handle error
+                this.setState({filteredArticles: []});
+                console.log('/filteredarticles get error', error);
+            });
+    };
+
+    getFilterArticlesList = (filteredArticles) => {
         let filterArticle;
-        if (articles === undefined) {//ответ еще не получили
+        if (filteredArticles === undefined) {//ответ еще не получили
             filterArticle = <Preloader/>
-        } else if (articles.length) {//норм ответ со статьями
+        } else if (filteredArticles.length) {//норм ответ со статьями
             filterArticle = <div className="filter_article_cover">
                 {
-                    articles.map((article, index) => {
+                    filteredArticles.map((filteredArticle, index) => {
                         return <GroupedArticle
-                            key={article.id}
-                            img={article.image}
-                            rank={article.info.rank}
-                            title={article.headline}
-                            sumcomments={article.sumcomments}
+                            key={filteredArticle.id}
+                            img={filteredArticle.image}
+                            title={filteredArticle.headline}
+                            sumcomments={filteredArticle.sumcomments}
                         />
                     })
                 }
@@ -101,10 +114,12 @@ export default class Main extends React.Component{
     };
 
     render(){
+        const filteredArticles = this.state.filteredArticles;
+        const filterArticle = this.getFilterArticlesList(filteredArticles);
         const articles = this.props.articles;
         const selectedArticle = this.props.selectedArticle;
         const selectedPage = this.props.selectedPage;
-        const filterArticle = this.getFilterArticlesList(articles);
+
 
         let content;
         if (selectedArticle){

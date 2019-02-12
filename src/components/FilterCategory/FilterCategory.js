@@ -13,7 +13,7 @@ export default class FilterCategory extends React.Component{
                 key={index}
                 className={`filter_category ${activeClassNameFilter}`}
                 onClick={() => this.onFilterCategoryClick(filterCategory)}
-                data-filterCategory={filterCategory}
+                data-filtercategory={filterCategory}
                 >
                 <p>{filterCategory}</p>
             </div>
