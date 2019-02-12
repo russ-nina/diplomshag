@@ -8,10 +8,35 @@ import Slider from '../slider/Slider';
 import Preloader from '../spiner/Preloader';
 import GroupedArticle from '../groupedArticle/GroupedArticle';
 import FilterCategory from '../FilterCategory/FilterCategory';
+import AxiosMockAdapter from '../../Utils/AxiosMockAdapter/AxiosMockAdapter';
+import axios from "axios";
 
 
 const DESCRIPTION_LENGTH = 350;
+const FILTER_CATEGORIES = {
+    WEIGHTY: "weighty",
+    POPULAR: "popular",
+    ARCHIVED: "archived",
+};
 export default class Main extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedFilterCategory: FILTER_CATEGORIES.WEIGHTY,
+        }
+    };
+    // componentDidMount() {
+    //     this.getFilterArticlesList(this.state.selectedFilterCategory);
+    // };
+    setSelectedFilterCategory = (filterCategory) => {
+        this.setState({selectedFilterCategory: filterCategory});
+    };
+    onFilterCategoryClick = (filterCategory) => {
+        // this.setSelectedArticle(undefined);
+        // this.setSelectedPage(undefined);
+        this.setSelectedFilterCategory(filterCategory);
+        // this.getArticles(category);
+    };
 
     getArticlesList = (articles) => {
         let articleListContainer;
@@ -79,7 +104,6 @@ export default class Main extends React.Component{
         const articles = this.props.articles;
         const selectedArticle = this.props.selectedArticle;
         const selectedPage = this.props.selectedPage;
-
         const filterArticle = this.getFilterArticlesList(articles);
 
         let content;
@@ -117,7 +141,11 @@ export default class Main extends React.Component{
                         <input type="search" placeholder="type and hit enter"/>
                     </div>
                     <div className="filter">
-                        <FilterCategory/>
+                        <FilterCategory
+                            filterCategories = {Object.values(FILTER_CATEGORIES)}
+                            selectedFilterCategory = {this.state.selectedFilterCategory}
+                            onFilterCategoryClick = {this.onFilterCategoryClick}
+                        />
                         {filterArticle}
                     </div>
                     <div className="comments_block">

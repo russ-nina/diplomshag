@@ -32,24 +32,21 @@ class App extends Component {
 
     onPageClick = (page) => {
         this.setSelectedArticle(undefined);
-
         this.setSelectedPage(page);
         this.getPages(page);
+        window.scrollTo(0,0);
     };
 
     onCategoryClick = (category) => {
         this.setSelectedArticle(undefined);
         this.setSelectedPage(undefined);
-
         this.setSelectedCategory(category);
         this.getArticles(category);
-
         window.scrollTo(0,0);
     };
 
     onSelectArticle = (article) => {
         this.setSelectedPage(undefined);
-
         this.setSelectedArticle(article);
         this.setSelectedCategory('');
     };
@@ -68,13 +65,10 @@ class App extends Component {
 
     getArticles = (category) => {
         this.setState({articles: undefined});
-
         let articlesUrl = '/articles';
-
         if (category && category !== CATEGORIES.HOME) {
             articlesUrl = `/articles/${category}`;
         }
-
         axios.get(articlesUrl)
             .then(response => this.setState({articles: response.data}))
             .catch(error => {
@@ -85,7 +79,6 @@ class App extends Component {
     };
     getPages = () => {
         let pageUrl = '/page';
-
         axios.get(pageUrl)
             .then(response => this.setState({pages: response.data}))
             .catch(error => {

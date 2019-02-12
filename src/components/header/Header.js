@@ -21,10 +21,12 @@ export default class Header extends React.Component {
     hendleScroll = (e) => {
         e.preventDefault();
         e.stopPropagation();
+        let fixedMenu = false;
 
-        let fixedElem = this.navRefEl;
-        let fixedElemSourceTop = fixedElem.getBoundingClientRect().top + window.pageYOffset;
-        let fixedMenu = window.pageYOffset > fixedElemSourceTop;
+        if (this.navRefEl && this.navRefEl.getBoundingClientRect) {
+            let SourceElemTop = this.navRefEl.getBoundingClientRect().top + window.pageYOffset;
+            fixedMenu = window.pageYOffset > SourceElemTop;
+        }
 
         this.setState({fixedMenu: fixedMenu});
     };

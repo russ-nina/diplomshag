@@ -6,7 +6,6 @@ import Preloader from '../spiner/Preloader';
 export default class Footer extends React.Component{
     onPageClick = (page) => {
         this.props.onPageClick(page);
-        // let activeClassName = page === this.props.selectedPage ? `nav_active` : '';
     };
     render(){
         let activeClassName = "";

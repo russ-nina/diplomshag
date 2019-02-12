@@ -3,7 +3,7 @@
     display: flex;
     margin-top: 25px;
 }
-.weighty, .popular, .archived{
+.filter_category{
     background-color: #4a4843;
     box-shadow: 0 0 5px rgba(74, 72, 67, .3);
     padding: 10px;
@@ -13,16 +13,10 @@
     transition-duration: .3s;
     text-transform: capitalize;
 }
-.archived:hover{
+.filter_category:hover{
     background-color: #ff6f61;
 }
-.popular:hover{
-    background-color: #ff6f61;
-}
-.weighty:hover{
-    background-color: #ff6f61;
-}
-.weighty, .popular, .archived p{
+.filter_category p{
     color: #f1f1f1;
     font-size: 18px;
     font-family: Lato Regular, sans-serif;
