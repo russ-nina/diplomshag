@@ -2,6 +2,8 @@ import React from 'react';
 import "./header.css";
 import Article from "../Article/Article";
 
+let now = new Date().toDateString();
+
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -58,7 +60,7 @@ export default class Header extends React.Component {
 
         return (
             <header>
-                <div className="local_date"><a href="#">06 January 2019</a></div>
+                <div className="local_date"><a href="#">{now}</a></div>
                 <div className="head">
                     <a href="#" className="site_name">
                         news&<br/>articles
