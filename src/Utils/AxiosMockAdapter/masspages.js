@@ -1,7 +1,7 @@
 export default [
     {
         id:1,
-        title: "our history",
+        title: "Our history",
         alias: "our-history",
         image:"http://www.topnews.ru/upload/photo/55acdedb/26495.png",
         text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor." +
@@ -22,7 +22,7 @@ export default [
     },
     {
         id:2,
-        title: "our team",
+        title: "Our team",
         alias: "our-team",
         image:"http://www.topnews.ru/upload/photo/55acdedb/26495.png",
         text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor." +
@@ -43,7 +43,7 @@ export default [
     },
     {
         id:3,
-        title: "how we do it",
+        title: "How we do it",
         alias: "how-we-do-it",
         image:"http://укроп.org/wp-content/uploads/2016/12/2-88.jpg",
         text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor." +
@@ -64,7 +64,7 @@ export default [
     },
     {
         id:4,
-        title: "contacts",
+        title: "Contacts",
         alias: "contacts",
         image:"https://s.zagranitsa.com/images/articles/1821/870x486/3691e06febe337a8891a846836255a34.jpg?1445245360",
         text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor." +

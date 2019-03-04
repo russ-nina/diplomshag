@@ -113,13 +113,21 @@ export default class Main extends React.Component{
         return filterArticle;
     };
 
+    handleSearch =(e) => {
+        let articless = this.articles.filter(function(article) {
+            return article.text.toLowerCase().search(e.target.value.toLowerCase())!== -1;
+        });
+        this.setState({
+            articles: articless
+        });
+    };
+
     render(){
         const filteredArticles = this.state.filteredArticles;
         const filterArticle = this.getFilterArticlesList(filteredArticles);
         const articles = this.props.articles;
         const selectedArticle = this.props.selectedArticle;
         const selectedPage = this.props.selectedPage;
-
 
         let content;
         if (selectedArticle){
@@ -153,7 +161,8 @@ export default class Main extends React.Component{
                 <aside className="right_sidebar">
                     <div className="search">
                         <p>Search</p>
-                        <input type="search" placeholder="type and hit enter"/>
+                        <input type="search" placeholder="type and hit enter"
+                               onChange={this.handleSearch}/>
                     </div>
                     <div className="filter">
                         <FilterCategory

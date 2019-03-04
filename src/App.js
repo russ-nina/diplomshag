@@ -6,18 +6,14 @@ import Footer from "./components/footer/Footer";
 import AxiosMockAdapter from './Utils/AxiosMockAdapter/AxiosMockAdapter';
 import axios from "axios";
 
-const CATEGORIES = {
-    HOME: "home",
-    WORLD: "world",
-    STORIES: "stories",
-    SPORT: "sport"
-};
+const DEFAULT_CATEGORY = "home";
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedCategory: CATEGORIES.HOME,
+            categories: undefined,
+            selectedCategory: DEFAULT_CATEGORY,
             articles: undefined,
             selectedArticle: undefined,
             pages: undefined,
@@ -28,6 +24,7 @@ class App extends Component {
     componentDidMount() {
         this.getArticles(this.state.selectedCategory);
         this.getPages(this.state.pages);
+        this.getCategories();
     };
 
     onPageClick = (page) => {
@@ -66,8 +63,8 @@ class App extends Component {
     getArticles = (category) => {
         this.setState({articles: undefined});
         let articlesUrl = '/articles';
-        if (category && category !== CATEGORIES.HOME) {
-            articlesUrl = `/articles/${category}`;
+        if (category && category !== DEFAULT_CATEGORY) {
+           articlesUrl = `/articles/${category}`;
         }
         axios.get(articlesUrl)
             .then(response => this.setState({articles: response.data}))
@@ -77,6 +74,7 @@ class App extends Component {
                 console.log('/articles get error', error);
             });
     };
+
     getPages = () => {
         let pageUrl = '/page';
         axios.get(pageUrl)
@@ -88,12 +86,24 @@ class App extends Component {
             });
     };
 
+    getCategories = () => {
+        let categoryUrl = '/category';
+        axios.get(categoryUrl)
+            .then(response => this.setState({categories: response.data}))
+            .catch(error => {
+                // handle error
+                this.setState({categories: []});
+                console.log('/categories get error', error);
+            });
+    };
+
+
     render() {
         return (
             <div className="App">
                 <Header
                     selectedCategory={this.state.selectedCategory}
-                    categories={Object.values(CATEGORIES)}
+                    categories={this.state.categories}
                     onCategoryClick={this.onCategoryClick}
                 />
                 <Main

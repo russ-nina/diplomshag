@@ -46,17 +46,23 @@ export default class Header extends React.Component {
     render() {
         let fixedMenu = this.state.fixedMenu;
         let fixedClassMenu = fixedMenu ? 'navigation_fixed' : '';
-        let categories = this.props.categories.map((category, index) => {
-            let selectedCategory = this.props.selectedCategory;
-            const activeClassName = category === selectedCategory ? `nav_active` : '';
+        let categories = null;
 
-            return <li data-category={category}
-                       onClick={this.onCategoryClick}
-                       key={index}
-            >
-                <a className={`nav ${activeClassName}`} href="#">{category}</a>
-            </li>
-        });
+        if (this.props.categories) {
+            categories = this.props.categories.map((category, index) => {
+                const categoryName = category.name;
+
+                let selectedCategory = this.props.selectedCategory;
+                const activeClassName = categoryName === selectedCategory ? `nav_active` : '';
+
+                return <li data-category={categoryName}
+                           onClick={this.onCategoryClick}
+                           key={index}
+                >
+                    <a className={`nav ${activeClassName}`} href="#">{categoryName}</a>
+                </li>
+            });
+        }
 
         return (
             <header>
