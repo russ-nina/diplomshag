@@ -16,8 +16,10 @@ class App extends Component {
             selectedCategory: DEFAULT_CATEGORY,
             articles: undefined,
             selectedArticle: undefined,
+            selectedArticleFetching: false,
             pages: undefined,
-            selectedPage: undefined
+            selectedPage: undefined,
+            searchPhrase: undefined
         }
     };
 
@@ -39,6 +41,7 @@ class App extends Component {
         this.setSelectedPage(undefined);
         this.setSelectedCategory(category);
         this.getArticles(category);
+        this.setState({searchPhrase: ''});
         window.scrollTo(0,0);
     };
 
@@ -46,6 +49,24 @@ class App extends Component {
         this.setSelectedPage(undefined);
         this.setSelectedArticle(article);
         this.setSelectedCategory('');
+    };
+
+    onSelectArticleId = (articleId) => {
+        this.onSelectArticle(undefined);
+        this.setState({selectedArticleFetching: true});
+
+        let articleIdUrl = `/articles/${articleId}`;
+
+        axios.get(articleIdUrl)
+            .then(response => {
+                this.setSelectedArticle(response.data);
+                this.setState({selectedArticleFetching: false});
+            })
+            .catch(error => {
+                // handle error
+                this.onSelectArticle(undefined);
+                this.setState({selectedArticleFetching: false});
+            });
     };
 
     setSelectedPage = (page) => {
@@ -60,13 +81,20 @@ class App extends Component {
         this.setState({selectedCategory: category});
     };
 
-    getArticles = (category) => {
+    getArticles = (category, searchPhrase) => {
+        let axiosConfig = {};
+
         this.setState({articles: undefined});
         let articlesUrl = '/articles';
-        if (category && category !== DEFAULT_CATEGORY) {
+        if (searchPhrase) {
+            articlesUrl = `/articles/search`;
+            axiosConfig.params = {
+                searchText: searchPhrase
+            };
+        } else if (category && category !== DEFAULT_CATEGORY) {
            articlesUrl = `/articles/${category}`;
         }
-        axios.get(articlesUrl)
+        axios.get(articlesUrl, axiosConfig)
             .then(response => this.setState({articles: response.data}))
             .catch(error => {
                 // handle error
@@ -97,6 +125,12 @@ class App extends Component {
             });
     };
 
+    handleSearch =(e) => {
+        const searchPhrase = e.target.value;
+        this.setState({searchPhrase: searchPhrase});
+
+        this.getArticles(this.state.selectedCategory, searchPhrase.toLowerCase());
+    };
 
     render() {
         return (
@@ -108,9 +142,13 @@ class App extends Component {
                 />
                 <Main
                     setSelectedArticle={this.onSelectArticle}
+                    setSelectedArticleId={this.onSelectArticleId}
                     articles={this.state.articles}
                     selectedArticle={this.state.selectedArticle}
+                    selectedArticleFetching={this.state.selectedArticleFetching}
                     selectedPage={this.state.selectedPage}
+                    handleSearch={this.handleSearch}
+                    searchPhrase={this.state.searchPhrase}
                 />
                 <Footer
                     pages={this.state.pages}

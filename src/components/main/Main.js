@@ -102,6 +102,7 @@ export default class Main extends React.Component{
                             img={filteredArticle.image}
                             title={filteredArticle.headline}
                             sumcomments={filteredArticle.sumcomments}
+                            onArticleClick={() => this.props.setSelectedArticleId(filteredArticle.id)}
                         />
                     })
                 }
@@ -113,24 +114,18 @@ export default class Main extends React.Component{
         return filterArticle;
     };
 
-    handleSearch =(e) => {
-        let articless = this.articles.filter(function(article) {
-            return article.text.toLowerCase().search(e.target.value.toLowerCase())!== -1;
-        });
-        this.setState({
-            articles: articless
-        });
-    };
-
     render(){
         const filteredArticles = this.state.filteredArticles;
         const filterArticle = this.getFilterArticlesList(filteredArticles);
         const articles = this.props.articles;
         const selectedArticle = this.props.selectedArticle;
+        const selectedArticleFetching = this.props.selectedArticleFetching;
         const selectedPage = this.props.selectedPage;
 
         let content;
-        if (selectedArticle){
+        if (selectedArticleFetching) {
+            content = <Preloader/>;
+        } else if (selectedArticle){
             content = <FullArticle
 
                 id={selectedArticle.id}
@@ -162,7 +157,8 @@ export default class Main extends React.Component{
                     <div className="search">
                         <p>Search</p>
                         <input type="search" placeholder="type and hit enter"
-                               onChange={this.handleSearch}/>
+                               value={this.props.searchPhrase}
+                               onChange={this.props.handleSearch}/>
                     </div>
                     <div className="filter">
                         <FilterCategory

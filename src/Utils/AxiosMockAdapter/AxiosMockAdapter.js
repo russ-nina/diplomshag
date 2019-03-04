@@ -1,6 +1,7 @@
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 import massarticles from "./massarticles";
+import singleArticle from "./singleArticle";
 import massArticlesWorld from "./massArticlesWorld";
 import massArticlesStories from "./massArticlesStories";
 import masspages from "./masspages";
@@ -16,8 +17,10 @@ if (process.env.NODE_ENV === 'development') {
 // Mock any GET request to /users
 // arguments for reply are (status, data, headers)
     mock.onGet('/articles').reply(200, massarticles);
+    mock.onGet('/articles/1').reply(200, singleArticle);
     mock.onGet('/articles/world').reply(200, massArticlesWorld);
     mock.onGet('/articles/stories').reply(200, massArticlesStories);
+    mock.onGet('/articles/search',{ params: { searchText: 'john' } }).reply(200, massArticlesStories);
 
     mock.onGet('/page').reply(200, masspages);
     mock.onGet('/page/our-history').reply(200, masspages);
