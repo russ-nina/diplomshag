@@ -4,6 +4,10 @@ import massarticles from "./massarticles";
 import singleArticle from "./singleArticle";
 import massArticlesWorld from "./massArticlesWorld";
 import massArticlesStories from "./massArticlesStories";
+import massArticlesUk from "./massArticlesUk";
+import massArticlesBrazil from "./massArticlesBrazil";
+import massArticleMila from "./massArticleMila";
+import massArticleToni from "./massArticleToni";
 import masspages from "./masspages";
 import massfilteredarticles from "./massfilterarticles";
 import massFilteredArticlesWeighty from "./massFilteredArticlesWeighty";
@@ -18,8 +22,16 @@ if (process.env.NODE_ENV === 'development') {
 // arguments for reply are (status, data, headers)
     mock.onGet('/articles').reply(200, massarticles);
     mock.onGet('/articles/1').reply(200, singleArticle);
+    //Categories
     mock.onGet('/articles/world').reply(200, massArticlesWorld);
     mock.onGet('/articles/stories').reply(200, massArticlesStories);
+    //Tags
+    mock.onGet('/articles/uk').reply(200, massArticlesUk);
+    mock.onGet('/articles/brazil').reply(200, massArticlesBrazil);
+    //Author
+    mock.onGet('/articles/mila').reply(200, massArticleMila);
+    mock.onGet('/articles/toni-star').reply(200, massArticleToni);
+    //Search
     mock.onGet('/articles/search',{ params: { searchText: 'john' } }).reply(200, massArticlesStories);
 
     mock.onGet('/page').reply(200, masspages);

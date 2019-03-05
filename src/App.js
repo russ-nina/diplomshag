@@ -19,7 +19,7 @@ class App extends Component {
             selectedArticleFetching: false,
             pages: undefined,
             selectedPage: undefined,
-            searchPhrase: undefined
+            searchPhrase: undefined,
         }
     };
 
@@ -41,6 +41,24 @@ class App extends Component {
         this.setSelectedPage(undefined);
         this.setSelectedCategory(category);
         this.getArticles(category);
+        this.setState({searchPhrase: ''});
+        window.scrollTo(0,0);
+    };
+
+    onTagClick = (tag) => {
+        this.setSelectedArticle(undefined);
+        this.setSelectedPage(undefined);
+        this.setSelectedCategory(undefined);
+        this.getArticles(tag);
+        this.setState({searchPhrase: ''});
+        window.scrollTo(0,0);
+    };
+
+    onAuthorClick = (author) => {
+        this.setSelectedArticle(undefined);
+        this.setSelectedPage(undefined);
+        this.setSelectedCategory(undefined);
+        this.getArticles(author);
         this.setState({searchPhrase: ''});
         window.scrollTo(0,0);
     };
@@ -81,7 +99,7 @@ class App extends Component {
         this.setState({selectedCategory: category});
     };
 
-    getArticles = (category, searchPhrase) => {
+    getArticles = (category, searchPhrase, tag, author) => {
         let axiosConfig = {};
 
         this.setState({articles: undefined});
@@ -91,8 +109,12 @@ class App extends Component {
             axiosConfig.params = {
                 searchText: searchPhrase
             };
+        } else if (author) {
+           articlesUrl = `/articles/${author}`;
+        }  else if (author) {
+            articlesUrl = `/articles/${tag}`;
         } else if (category && category !== DEFAULT_CATEGORY) {
-           articlesUrl = `/articles/${category}`;
+            articlesUrl = `/articles/${category}`;
         }
         axios.get(articlesUrl, axiosConfig)
             .then(response => this.setState({articles: response.data}))
@@ -149,6 +171,9 @@ class App extends Component {
                     selectedPage={this.state.selectedPage}
                     handleSearch={this.handleSearch}
                     searchPhrase={this.state.searchPhrase}
+                    onTagClick={this.onTagClick}
+                    onAuthorClick={this.onAuthorClick}
+                    onCategoryClick={this.onCategoryClick}
                 />
                 <Footer
                     pages={this.state.pages}

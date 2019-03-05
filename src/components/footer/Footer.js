@@ -37,13 +37,21 @@ export default class Footer extends React.Component{
                     <div className="footer_right_side">
                         <div className="we_are_in_social_networks"><p>we are in social networks</p></div>
                         <ul className="social_networks">
-                            <li className="in_social"><i className="icon icon-facebook"></i></li>
-                            <li className="in_social"><i className="icon icon-twitter"></i></li>
-                            <li className="in_social"><i className="icon icon-youtube"></i></li>
-                            <li className="in_social"><i className="icon icon-linkedin"></i></li>
-                    </ul>
+                            <div className="social youtube">
+                                <a href="https://www.youtube.com/" target="_blank"><i className="fa fa-youtube fa-2x"></i></a>
+                            </div>
+                            <div className="social twitter">
+                                <a href="https://twitter.com/" target="_blank"><i className="fa fa-twitter fa-2x"></i></a>
+                            </div>
+                            <div className="social instagram">
+                                <a href="https://www.instagram.com/" target="_blank"><i className="fa fa-instagram fa-2x"></i></a>
+                            </div>
+                            <div className="social facebook">
+                                <a href="https://www.facebook.com/games/" target="_blank"><i className="fa fa-facebook fa-2x"></i></a>
+                            </div>
+                        </ul>
+                    </div>
                 </div>
-            </div>
             </footer>
         );
     }

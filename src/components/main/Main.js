@@ -59,6 +59,9 @@ export default class Main extends React.Component{
                             tags={article.info.tags}
                             description={description}
                             onArticleClick={() => this.props.setSelectedArticle(article)}
+                            onTagClick={this.props.onTagClick}
+                            onAuthorClick={this.props.onAuthorClick}
+                            onCategoryClick={this.props.onCategoryClick}
                         />
                     })
                 }
