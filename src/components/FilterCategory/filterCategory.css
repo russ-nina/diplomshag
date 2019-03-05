@@ -50,11 +50,15 @@
 /* iPads (горизонтальная) ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     /* стили */
+    .filter_headline{display: block}
+    .filter_category{width: 100%}
 }
 
 /* iPads (вертикальная) ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     /* стили */
+    .filter_headline{display: block}
+    .filter_category{width: 100%}
 }
 
 /* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
