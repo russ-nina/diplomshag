@@ -88,3 +88,54 @@ a{
 }
 /*-----------------------------------------------------------------------------*/
 /*End General rules*/
+
+
+/* Настольные компьютеры и ноутбуки ----------- */
+@media only screen  and (min-width: 1224px) {
+    /* стили */
+
+}
+
+/* iPad 3**********/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+    .content{display: block}
+    .info, .headline, .description{margin-left: 0;}
+
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+    .content{display: block}
+
+}
+
+/* iPads (горизонтальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* стили */
+    .content{display: block}
+    .date{margin-right: 10px;font-size: 12px;}
+    .author{margin-right: 10px;font-size: 12px;}
+    .rank{margin-right: 10px;font-size: 12px;}
+    .tags{margin-right: 10px;font-size: 12px;}
+}
+
+/* iPads (вертикальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    /* стили */
+    .content{display: block}
+    .date{margin-right: 10px;font-size: 12px;}
+    .author{margin-right: 10px;font-size: 12px;}
+    .rank{margin-right: 10px;font-size: 12px;}
+    .tags{margin-right: 10px;font-size: 12px;}
+}
+
+/* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    /* стили */
+    .content{display: block}
+    .date{margin-right: 10px;font-size: 10px;}
+    .author{margin-right: 10px;font-size: 10px;}
+    .rank{margin-right: 10px;font-size: 10px;}
+    .tags{margin-right: 10px;font-size: 10px;}
+}

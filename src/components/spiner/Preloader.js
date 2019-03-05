@@ -6,7 +6,7 @@ export default class Preloader  extends Component {
         return (
             <div className="container">
                 <div className="spinner_cover">
-                    <Spinner size={120} spinnerColor={"#ff6f61"} spinnerWidth={2} visible={true} />
+                    <Spinner size={80} spinnerColor={"#ff6f61"} spinnerWidth={2} visible={true} />
                 </div>
             </div>
         );

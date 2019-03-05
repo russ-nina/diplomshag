@@ -1,4 +1,4 @@
-/*Article*/
+/*FullArticle*/
 /*-----------------------*/
 .container_full{
     grid-column: 1/10;
@@ -54,7 +54,7 @@
     line-height: 1.5em;
 }
 /*-----------------------*/
-/*End Article*/
+/*End FullArticle*/
 
 /*General rules*/
 /*-----------------------------------------------------------------------------*/

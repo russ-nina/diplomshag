@@ -1,7 +1,10 @@
+/*FilterCategory*/
+/*----------------------------------------------*/
 .filter_headline{
     width: 100%;
     display: flex;
     margin-top: 25px;
+    justify-content: space-between;
 }
 .filter_category{
     background-color: #4a4843;
@@ -20,4 +23,44 @@
     color: #f1f1f1;
     font-size: 18px;
     font-family: Lato Regular, sans-serif;
+    text-align: center;
 }
+/* And FilterCategory*/
+/*----------------------------------------------*/
+
+
+/* Настольные компьютеры и ноутбуки ----------- */
+@media only screen  and (min-width: 1224px) {
+    /* стили */
+
+}
+
+/* iPad 3**********/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+    .filter_headline{display: block}
+    .filter_category{width: 100%}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+    .filter_headline{display: block}
+    .filter_category{width: 100%}
+}
+
+/* iPads (горизонтальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* стили */
+}
+
+/* iPads (вертикальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    /* стили */
+}
+
+/* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    /* стили */
+    .filter_headline{display: block}
+    .filter_category{width: 100%}
+}
+
