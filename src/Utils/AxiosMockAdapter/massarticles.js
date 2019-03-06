@@ -2,11 +2,11 @@ export default [
     {
         id:1,
         sumcomments:5,
-        image: "https://i.ytimg.com/vi/yKNIDUgIZnI/maxresdefault.jpg",
+        image: "https://cs1.livemaster.ru/storage/4f/c8/184d0aae2ebf0c5d653a04a3462t--kartiny-i-panno-more-abstraktsiya-holst-maslo.jpg",
         slides_img:[
             {
                 id:1,
-                image: "https://i.ytimg.com/vi/yKNIDUgIZnI/maxresdefault.jpg",
+                image: "https://cs1.livemaster.ru/storage/4f/c8/184d0aae2ebf0c5d653a04a3462t--kartiny-i-panno-more-abstraktsiya-holst-maslo.jpg",
                 headline:"Brazil deploys troops to stop violence in Fortaleza",
             },
             {
@@ -187,11 +187,11 @@ export default [
     {
         id:5,
         sumcomments:4,
-        image:"https://i2.rozetka.ua/goods/1834650/13538723_images_1834650204.jpg",
+        image:"https://cs1.livemaster.ru/storage/4f/c8/184d0aae2ebf0c5d653a04a3462t--kartiny-i-panno-more-abstraktsiya-holst-maslo.jpg",
         slides_img:[
             {
                 id:1,
-                image: "https://i2.rozetka.ua/goods/1834650/13538723_images_1834650204.jpg",
+                image: "https://cs1.livemaster.ru/storage/4f/c8/184d0aae2ebf0c5d653a04a3462t--kartiny-i-panno-more-abstraktsiya-holst-maslo.jpg",
                 headline:"Brazil deploys troops to stop violence in Fortaleza",
             },
             {

@@ -140,6 +140,9 @@ export default class Main extends React.Component{
                 rank={selectedArticle.info.rank}
                 tags={selectedArticle.info.tags}
                 text={selectedArticle.text}
+                onTagClick={this.props.onTagClick}
+                onAuthorClick={this.props.onAuthorClick}
+                onCategoryClick={this.props.onCategoryClick}
             />;
         } else if(selectedPage){
             content = <FullPage

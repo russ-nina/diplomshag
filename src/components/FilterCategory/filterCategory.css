@@ -9,7 +9,7 @@
 .filter_category{
     background-color: #4a4843;
     box-shadow: 0 0 5px rgba(74, 72, 67, .3);
-    padding: 10px;
+    padding: 10px 0 10px 0;
     border: 1px solid #f1f1f1;
     width: calc(100% / 3);
     cursor: pointer;
@@ -32,7 +32,11 @@
 /* Настольные компьютеры и ноутбуки ----------- */
 @media only screen  and (min-width: 1224px) {
     /* стили */
-
+    /*.filter_category p{font-size: 14px;}*/
+}
+@media only screen  and (min-width: 1024px) and (max-width: 1224px){
+    /* стили */
+    .filter_category p{font-size: 14px;}
 }
 
 /* iPad 3**********/
@@ -40,11 +44,13 @@
     /* стили */
     .filter_headline{display: block}
     .filter_category{width: 100%}
+
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     /* стили */
     .filter_headline{display: block}
     .filter_category{width: 100%}
+
 }
 
 /* iPads (горизонтальная) ----------- */
@@ -52,6 +58,7 @@
     /* стили */
     .filter_headline{display: block}
     .filter_category{width: 100%}
+
 }
 
 /* iPads (вертикальная) ----------- */
@@ -59,6 +66,7 @@
     /* стили */
     .filter_headline{display: block}
     .filter_category{width: 100%}
+
 }
 
 /* Smartphones (вертикальная и горизонтальная ориентация) ----------- */

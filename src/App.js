@@ -19,7 +19,7 @@ class App extends Component {
             selectedArticleFetching: false,
             pages: undefined,
             selectedPage: undefined,
-            searchPhrase: undefined,
+            searchPhrase: '',
         }
     };
 
@@ -111,7 +111,7 @@ class App extends Component {
             };
         } else if (author) {
            articlesUrl = `/articles/${author}`;
-        }  else if (author) {
+        }  else if (tag) {
             articlesUrl = `/articles/${tag}`;
         } else if (category && category !== DEFAULT_CATEGORY) {
             articlesUrl = `/articles/${category}`;
